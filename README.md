@@ -220,10 +220,27 @@ int main(int argc, char **argv)
     return 0;
 }
 ```
-## OUTPUT:
 
-<img width="894" height="159" alt="image" src="https://github.com/user-attachments/assets/c39c7928-afe9-40cc-a616-0b847afe0132" />
+## OUTPUT:
+### 512 Threads
+
+<img width="701" height="156" alt="image" src="https://github.com/user-attachments/assets/50212eb0-de2e-426b-9ffc-854dd1864402" />
+
+
+### 1023 Threads
+
+<img width="701" height="153" alt="image" src="https://github.com/user-attachments/assets/0bd7286a-8764-4127-b208-a903575df819" />
+
+
+### 1024 Threads
+
+<img width="710" height="151" alt="image" src="https://github.com/user-attachments/assets/b912daa7-31c3-4695-b58e-ee143358c596" />
+
+
+### 256 Threads
+
+<img width="696" height="156" alt="image" src="https://github.com/user-attachments/assets/516e3883-22d9-4315-a680-0804c1c7cd0a" />
 
 
 ## RESULT:
-Thus, Implementation of sum arrays on host and device is done in nvcc cuda using random number.
+Thus, all four CUDA executions produced correct outputs with successful array matching. The configuration using 256 threads per block achieved the best performance with the minimum execution time of 0.000986 seconds, while higher thread counts introduced slightly more execution overhead.
